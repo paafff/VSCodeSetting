@@ -1,0 +1,148 @@
+{
+    "telemetry.machineId": "4b4a934168a72604b7ab2116a4b9f21a66a14c4800b8a6e034f4b3c274a6e5a2",
+    "windowsState": {
+        "lastActiveWindow": {
+            "folder": "file:///c%3A/Users/paafff/Desktop/devp/myPersonalWeb",
+            "backupPath": "C:\\Users\\paafff\\AppData\\Roaming\\Code\\Backups\\93e3c78d199305931e1f9317f836cdbc",
+            "uiState": {
+                "mode": 1,
+                "x": 855,
+                "y": 0,
+                "width": 1067,
+                "height": 1032
+            }
+        },
+        "openedWindows": [
+            {
+                "folder": "file:///c%3A/Users/paafff/Desktop/devp/myPersonalWeb",
+                "backupPath": "C:\\Users\\paafff\\AppData\\Roaming\\Code\\Backups\\93e3c78d199305931e1f9317f836cdbc",
+                "uiState": {
+                    "mode": 1,
+                    "x": 855,
+                    "y": 0,
+                    "width": 1067,
+                    "height": 1032
+                }
+            },
+            {
+                "folder": "file:///c%3A/Users/paafff/Desktop/devp/myPersonalWeb/mypersonalfrontend",
+                "backupPath": "C:\\Users\\paafff\\AppData\\Roaming\\Code\\Backups\\a2a7c28bafe8b08a5e0cfa2357cb76c6",
+                "uiState": {
+                    "mode": 1,
+                    "x": 857,
+                    "y": 121,
+                    "width": 1024,
+                    "height": 768
+                }
+            },
+            {
+                "folder": "file:///c%3A/Users/paafff/Desktop/devp/projectOlshop_MySQL/Alpha",
+                "backupPath": "C:\\Users\\paafff\\AppData\\Roaming\\Code\\Backups\\57bb3a15660d843fdc946f72f6c0369a",
+                "uiState": {
+                    "mode": 1,
+                    "x": 0,
+                    "y": 0,
+                    "width": 960,
+                    "height": 1032
+                }
+            },
+            {
+                "folder": "file:///c%3A/Users/paafff/Desktop/devp/myPersonalWeb/mypersonalbackend",
+                "backupPath": "C:\\Users\\paafff\\AppData\\Roaming\\Code\\Backups\\f3d20f41b036996278ab205a5deee8b5",
+                "uiState": {
+                    "mode": 1,
+                    "x": 90,
+                    "y": 175,
+                    "width": 1024,
+                    "height": 768
+                }
+            },
+            {
+                "folder": "file:///c%3A/Users/paafff/Desktop/devp/maling",
+                "backupPath": "C:\\Users\\paafff\\AppData\\Roaming\\Code\\Backups\\96c759caf806283111c2864a0021cdd0",
+                "uiState": {
+                    "mode": 1,
+                    "x": 122,
+                    "y": 174,
+                    "width": 1024,
+                    "height": 768
+                }
+            }
+        ]
+    },
+    "theme": "vs-dark",
+    "themeBackground": "#23272e",
+    "windowSplash": {
+        "zoomLevel": 0,
+        "baseTheme": "vs-dark",
+        "colorInfo": {
+            "foreground": "#cccccc",
+            "background": "#23272e",
+            "editorBackground": "#23272e",
+            "titleBarBackground": "#23272e",
+            "activityBarBackground": "#23272e",
+            "sideBarBackground": "#1e2227",
+            "statusBarBackground": "#1e2227",
+            "statusBarNoFolderBackground": "#1e2227"
+        },
+        "layoutInfo": {
+            "sideBarSide": "left",
+            "editorPartMinWidth": 220,
+            "titleBarHeight": 35,
+            "activityBarWidth": 48,
+            "sideBarWidth": 256,
+            "statusBarHeight": 22,
+            "windowBorder": false
+        }
+    },
+    "backupWorkspaces": {
+        "workspaces": [],
+        "folders": [
+            {
+                "folderUri": "file:///c%3A/Users/paafff/Desktop/devp/myPersonalWeb"
+            },
+            {
+                "folderUri": "file:///c%3A/Users/paafff/Desktop/devp/myPersonalWeb/mypersonalfrontend"
+            },
+            {
+                "folderUri": "file:///c%3A/Users/paafff/Desktop/devp/projectOlshop_MySQL/Alpha"
+            },
+            {
+                "folderUri": "file:///c%3A/Users/paafff/Desktop/devp/myPersonalWeb/mypersonalbackend"
+            },
+            {
+                "folderUri": "file:///c%3A/Users/paafff/Desktop/devp/maling"
+            }
+        ],
+        "emptyWindows": []
+    },
+    "userDataProfilesMigration": true,
+    "profileAssociations": {
+        "workspaces": {
+            "file:///c%3A/Users/paafff/Desktop/devp": "__default__profile__",
+            "file:///c%3A/Users/paafff/Desktop/devp/projectOlshop_MongoDB/Alpha": "__default__profile__",
+            "file:///c%3A/Users/paafff/Desktop/devp/projectOlshop_MongoDB/Alpha/backend": "__default__profile__",
+            "file:///c%3A/Users/paafff/Desktop/devp/projectOlshop_MongoDB/Alpha/frontend": "__default__profile__",
+            "file:///c%3A/Users/paafff/Desktop/devp/projectOlshop_MongoDB/Beta": "__default__profile__",
+            "file:///c%3A/Users/paafff/Desktop/devp/maling/personal-blog-mern/mern-blog": "__default__profile__",
+            "file:///c%3A/Users/paafff/Desktop/devp/projectOlshop_MySQL": "__default__profile__",
+            "file:///c%3A/Users/paafff/Desktop/devp/maling/personal-blog-mern-lamadev": "__default__profile__",
+            "file:///c%3A/Users/paafff/Desktop/devp/projectOlshop_MongoDB": "__default__profile__",
+            "file:///c%3A/Users/paafff/Desktop/devp/maling/login_multirole": "__default__profile__",
+            "file:///c%3A/Users/paafff/Desktop/devp/github/project-macro-group4": "__default__profile__",
+            "file:///c%3A/Users/paafff/Desktop/devp/github/dummyMacro/macro-project-IL": "__default__profile__",
+            "file:///c%3A/Users/paafff/Desktop/devp/github/macro-group4": "__default__profile__",
+            "file:///c%3A/Users/paafff/Desktop/devp/github/macro-project-IL-coba": "__default__profile__",
+            "file:///c%3A/Users/paafff/Desktop/devp/github/macro-project-IL-xxx": "__default__profile__",
+            "file:///c%3A/Users/paafff/Desktop/devp/github/macro-project-IL": "__default__profile__",
+            "file:///c%3A/Users/paafff/Desktop/devp/myPersonalWeb": "__default__profile__",
+            "file:///c%3A/Users/paafff/Desktop/devp/myPersonalWeb/mypersonalfrontend": "__default__profile__",
+            "file:///c%3A/Users/paafff/Desktop/devp/projectOlshop_MySQL/Alpha": "__default__profile__",
+            "file:///c%3A/Users/paafff/Desktop/devp/myPersonalWeb/mypersonalbackend": "__default__profile__",
+            "file:///c%3A/Users/paafff/Desktop/devp/maling": "__default__profile__"
+        },
+        "emptyWindows": {}
+    },
+    "profileAssociationsMigration": true,
+    "windowControlHeight": 35
+}

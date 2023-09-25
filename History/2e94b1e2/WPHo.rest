@@ -1,0 +1,39 @@
+###
+//login user
+post http://localhost:5000/login
+Content-Type: application/json
+
+{
+  "email" : "danang050402@gmail.com",
+  "password" : "@paafff050402D"
+}
+
+###
+//createArticle
+post http://localhost:5000/article/create
+Content-Type: application/json
+
+{
+  "name" : "budi",
+  "email" : "lala@mail.com",
+  "title" : "mernstack",
+  "content" : "ini content",
+  "summary" : "ini summary"
+}
+
+
+###
+//updateArticle
+patch http://localhost:5000/article/update/mernstack
+Content-Type: application/json
+
+{
+  "title" : "mernstack",
+  "content" : "ini content updateeeeee",
+  "summary" : "ini summary updateeeeee"
+}
+
+
+###
+//getArticle
+get http://localhost:5000/article/mernstack

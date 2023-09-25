@@ -1,0 +1,30 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Experiment from './pages/Experiment';
+import AboutMe from './pages/AboutMe';
+import CreateArticle from './pages/ArticleCreate';
+import Cobacoba from './components/Cobacoba';
+import Articles from './pages/Articles';
+import ArticleDetail from './pages/ArticleDetail';
+import Authentication from './pages/Authentication';
+
+function App() {
+  return (
+    <div className="App">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/experiment" element={<Experiment />} />
+          <Route path="/aboutme" element={<AboutMe />} />
+          <Route path="/articles" element={<Articles />} />
+          <Route path="/articles/:title" element={<ArticleDetail />} />
+          <Route path="/article/create" element={<ArticleCreate />} />
+          <Route path="/auth" element={<Authentication />} />
+          <Route path="/coba" element={<Cobacoba />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
+  );
+}
+
+export default App;

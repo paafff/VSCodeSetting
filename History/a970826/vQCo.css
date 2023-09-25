@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: cabinetGrotesk;
+  src: url(./assets/fonts/CabinetGrotesk-Black.ttf);
+}
+@font-face {
+  font-family: inter;
+  src: url(./assets/fonts/CabinetGrotesk-Black.ttf);
+}
+@font-face {
+  font-family: cabinetGrotesk;
+  src: url(./assets/fonts/CabinetGrotesk-Black.ttf);
+}
+@font-face {
+  font-family: cabinetGrotesk;
+  src: url(./assets/fonts/CabinetGrotesk-Black.ttf);
+}

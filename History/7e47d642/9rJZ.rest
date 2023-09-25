@@ -1,0 +1,24 @@
+//register user
+post http://localhost:5000/register
+Content-Type: application/json
+
+{
+  "name" : "danangr",
+  "email" : "danang050402@gmail.com",
+  "password" : "12345",
+  "confPassword" : "12345"
+}
+
+  # "confPassword" : "@paafff050402D"
+
+//login user
+post http://localhost:5000/login
+Content-Type: application/json
+
+{
+  "email" : "danang050402@gmail.com",
+  "password" : "@paafff050402D"
+}
+
+//logout user
+delete http://localhost:5000/logout

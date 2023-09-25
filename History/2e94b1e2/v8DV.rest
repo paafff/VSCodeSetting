@@ -1,0 +1,25 @@
+//createArticle
+post http://localhost:5000/article/create
+Content-Type: application/json
+
+{
+  "name" : "budi",
+  "email" : "lala@mail.com",
+  "title" : "mernstack",
+  "content" : "ini content",
+  "summary" : "ini summary"
+}
+
+
+###
+//updateArticle
+patch http://localhost:5000/article/mernstack
+Content-Type: application/json
+
+{
+  "name" : "updt",
+  "email" : "updt@mail.com",
+  "title" : "mernstack",
+  "content" : "ini content update",
+  "summary" : "ini summary update"
+}

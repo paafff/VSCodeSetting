@@ -1,0 +1,218 @@
+import { articleDb, articleImgDb } from '../models/ArticleModel.js';
+import sharp from 'sharp';
+import multer from 'multer';
+
+const upload = multer().single('imgFilesOne');
+// const upload = multer().fields([
+//   { name: 'imgFilesOne', maxCount: 1 },
+//   { name: 'imgFilesTwo', maxCount: 1 },
+//   { name: 'imgFilesThree', maxCount: 1 },
+// ]);
+
+// export const createArticle = async (req, res) => {
+//   upload(req, res, async (error) => {
+//     if (error) {
+//       return res
+//         .status(500)
+//         .json({ msg: 'maaf,terjadi kesalahan dalam unggahan file' });
+//     }
+
+//     const { name, email, title, content, summary } = req.body;
+
+//     // const { imgFilesOne } = req.file.buffer;
+//     try {
+//       await articleDb.create({
+//         name: name,
+//         email: email,
+//         userId: req.userId,
+//         title: title,
+//         content: content,
+//         summary: summary,
+//       });
+
+//       await articleImgDb.create({
+//         userId: req.userId,
+//         title: title,
+//         img1: req.file
+//           ? await sharp(req.file.buffer).png().toBuffer()
+//           : undefined,
+//         // img2: imgFilesTwo
+//         //   ? await sharp(imgFilesTwo).png().toBuffer()
+//         //   : undefined,
+//         // img3: imgFilesThree
+//         //   ? await sharp(imgFilesThree).png().toBuffer()
+//         //   : undefined,
+//       });
+
+//       res.status(200).json({ msg: 'artikel sukses dibuat bang' });
+//     } catch (error) {
+//       res.status(500).json({ msg: error.message });
+//     }
+//   });
+// };
+
+export const createArticle = async (req, res) => {
+  upload(req, res, async (error) => {
+    if (error) {
+      return res
+        .status(500)
+        .json({ msg: 'maaf,terjadi kesalahan dalam unggahan file' });
+    }
+
+    const { name, email, title, content, summary } = req.body;
+
+    const { imgFilesOne } = req.file ? :await sharp(req.file.buffer).png().toBuffer();
+    try {
+      await articleDb.create({
+        name: name,
+        email: email,
+        userId: req.userId,
+        title: title,
+        content: content,
+        summary: summary,
+      });
+
+      await articleImgDb.create({
+        userId: req.userId,
+        title: title,
+        img1: imgFilesOne
+          ? await sharp(req.file.buffer).png().toBuffer()
+          : undefined,
+        // img2: imgFilesTwo
+        //   ? await sharp(imgFilesTwo).png().toBuffer()
+        //   : undefined,
+        // img3: imgFilesThree
+        //   ? await sharp(imgFilesThree).png().toBuffer()
+        //   : undefined,
+      });
+
+      res.status(200).json({ msg: 'artikel sukses dibuat bang' });
+    } catch (error) {
+      res.status(500).json({ msg: error.message });
+    }
+  });
+};
+
+export const updateArticle = async (req, res) => {
+  upload(req, res, async (error) => {
+    if (error) {
+      return res
+        .status(500)
+        .json({ msg: 'maaf terjadi kesalahan pada unggahan file' });
+    }
+
+    try {
+      const filterArticle = { title: req.params.title, userId: req.userId };
+
+      const { title, content, summary } = req.body;
+      const { imgFilesOne, imgFilesTwo, imgFilesThree } = req.file || {};
+
+      await articleDb.update(
+        {
+          title: title,
+          content: content,
+          summary: summary,
+        },
+        { where: filterArticle }
+      );
+
+      await articleImgDb.update(
+        {
+          img1: imgFilesOne
+            ? await sharp(imgFilesOne).png().toBuffer()
+            : undefined,
+          img2: imgFilesTwo
+            ? await sharp(imgFilesTwo).png().toBuffer()
+            : undefined,
+          img3: imgFilesThree
+            ? await sharp(imgFilesThree).png().toBuffer()
+            : undefined,
+        },
+        { where: filterArticle }
+      );
+
+      res.status(200).json({ msg: 'artikel sukses diperbarui' });
+    } catch (error) {
+      res.status(500).json({ msg: error.message });
+    }
+  });
+};
+
+export const getArticleByTitle = async (req, res) => {
+  try {
+    const findArticle = await articleDb.findOne({
+      where: { title: req.params.title },
+      attributes: ['title', 'content', 'summary', 'name', 'email'],
+    });
+    const findArticleImg = await articleImgDb.findOne({
+      where: { title: req.params.title },
+      attributes: ['img1', 'img2', 'img3'],
+    });
+
+    //digabungkan isi data array nya dengan spread operator
+    const articleData = {
+      ...findArticle.toJSON(),
+      ...findArticleImg.toJSON(),
+    };
+
+    if (!findArticle)
+      return res.status(404).json({ msg: 'article tidak ditemukan' });
+
+    res.status(200).json(articleData);
+  } catch (error) {
+    res.status(500).json({ msg: error.message });
+  }
+};
+
+// export const getArticles = async (req, res) => {
+//   try {
+//     const findArticle = await articleDb.findAll({
+//       attributes: ['name', 'title', 'content', 'summary', 'email'],
+//     });
+
+//     const findArticleImg = await articleImgDb.findAll({
+//       attributes: ['img1', 'img2', 'img3'],
+//     });
+
+//     // const articleData = {
+//     //   ...findArticle.toJSON(),
+//     //   ...findArticleImg.toJSON(),
+//     // };
+
+//     const articleData = findArticles.map((article, index) => {
+//       return {
+//         ...article.toJSON(),
+//         ...findArticleImgs[index].toJSON(),
+//       };
+//     });
+
+//     res.status(200).json(articleData);
+//   } catch (error) {
+//     res.status(500).json({ msg: error.message });
+//   }
+// };
+
+export const getArticles = async (req, res) => {
+  try {
+    const findArticle = await articleDb.findAll({
+      attributes: ['name', 'title', 'content', 'summary', 'email'],
+    });
+
+    const findArticleImg = await articleImgDb.findAll({
+      attributes: ['img1', 'img2', 'img3'],
+    });
+
+    //ingat, mapping parameter fungsi di awal adalah hasil/isi dari object yang sedang di mapping
+    //misalnya berikut isi findArticleFunc = findArticle
+    const articleData = findArticle.map((findArticleFunc, index) => {
+      return {
+        ...findArticleFunc.toJSON(),
+        ...findArticleImg[index].toJSON(),
+      };
+    });
+
+    res.status(200).json(articleData);
+  } catch (error) {
+    res.status(500).json({ msg: error.message });
+  }
+};

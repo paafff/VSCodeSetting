@@ -1,0 +1,34 @@
+{
+  "workbench.colorTheme": "One Dark Pro Darker",
+
+  "breadcrumbs.enabled": true,
+
+  "editor.tabSize": 2,
+  "editor.wordWrap": "off",
+  "editor.lineNumbers": "on",
+  "editor.formatOnSave": true,
+  "editor.minimap.enabled": true,
+  // "editor.codeLens": false,
+  // "editor.folding": false,
+  "editor.glyphMargin": false,
+  // "editor.renderWhitespace": "none",
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.guides.indentation": false,
+  "editor.renderControlCharacters": false,
+  // "editor.cursorSmoothCaretAnimation": "on",
+  "editor.bracketPairColorization.enabled": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.singleQuote": true,
+  // "editor.renderLineHighlight": "all",
+
+  // font settings
+  "editor.fontSize": 14,
+  "editor.fontWeight": "500",
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontWeight": "500",
+  "terminal.integrated.fontWeightBold": "500",
+
+  // nested file on left...
+  "explorer.compactFolders": false,
+  "editor.fontVariations": false
+}
